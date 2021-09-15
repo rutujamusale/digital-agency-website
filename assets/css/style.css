@@ -1,0 +1,736 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+@import url("https://unpkg.com/swiper@7/swiper-bundle.min.css");
+
+:root{
+    --header-height: 3rem;
+    /* ======color========= */
+    --button-color: rgb(43, 160, 206);
+    --text-color-white: white;
+    --text-color-black: black;
+    --text-color-gray: rgb(36, 35, 35);
+    --body-font: 'Poppins', sans-serif;
+    --big-font-size: 3rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+    --font-medium: 500;
+    --font-semi-bold: 600;
+    font-size: 25px;
+}
+
+/* ======== BASE ================s= */
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+    height: -webkit-fill-available;
+    font-size: 100%;
+}
+
+body{
+    margin: 0 0 var(--header-height) 0;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--body-color);
+    color: var(--text-color);
+}
+
+h1, h2, h3, h4{
+    color: var(--title-color);
+    font-weight: var(--font-semi-bold);
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+/* ============ Actual Code ================ */
+
+/* ====== Background =========== */
+
+.background{
+    background-image: url("../img/img1.jpg") ;
+    height: 100vh;
+    background-size: cover;
+    /* opacity: 0.7;
+    filter: brightness(0.5); */
+}
+.over{
+    background-color: #0025ff66;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    left: 0%;
+    backdrop-filter: blur(5);
+    z-index: 1;
+}
+.header {
+    width: 100%;
+    position: relative;
+    padding: 0.625rem 12.5rem; 
+}
+.nav{
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    bottom: 0;
+    position: relative;
+    z-index: 2;
+}
+.logo{
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: white;
+}
+.list_item a{
+    color: white;
+}
+.list{
+    display: inline-flex;
+
+}
+ul{
+    display: flex;
+}
+li{
+    padding: 1.25rem 1.875rem;
+}
+button{
+    border: none;
+    border-radius: 0.313rem;
+    padding: 0 1.25rem;
+    margin: 0.938rem ;
+    font-size: 1rem;
+}
+
+
+
+.list_item :hover{
+    background: white;
+    color: rgb(44, 218, 241);
+    font-weight: bolder;
+    padding: 0.5rem 0.625rem;
+    border-radius: 0.313rem;
+    transition: all 0.3s ease;
+    
+}
+.list_button :hover{
+    color: rgb(44, 218, 241);
+    font-weight: bolder;
+}
+.burger{
+    display: none;
+}
+
+/* === Container ======= */
+
+.container {
+    color: white;
+    margin: 20rem 0 0 12.5rem;
+    position: relative;
+    z-index: 2;
+    max-width: 40rem;
+}
+.int_button{
+    border: none;
+    border-radius: 0.313rem;
+    /* background: blue; */
+    padding: 1.25rem 1.875rem;
+    font-size: 1.063rem;
+    margin: 0;
+    margin-top: 1rem;
+    /* color: white; */
+}
+.int_button :hover{
+    /* background: blue; */
+    color: rgb(235, 19, 19);
+    /* font-weight: bolder; */
+}
+.title{
+    padding: 1rem 0;
+    font-weight: 600;
+}
+
+
+
+/* ======== Help =============== */
+.help{
+    /* text-align: center; */
+    padding: 3.125rem 12.5rem;
+    background-color: #ccd3fd66;
+    height: 60rem;
+}
+section{
+    height: 50rem;
+}
+.section-heading {
+    text-align: center;
+    font-size: 1.25rem;
+}
+.section-heading h1{
+    color: dodgerblue;
+}
+.section_subtitle{
+    padding: 2rem 20rem;
+    font-size: 1.125rem;
+    margin-bottom: 2rem;;
+}
+.cards{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2rem;
+    row-gap: 2rem;
+    /* margin-top: 2.5rem; */
+
+}
+.card{
+    width: 575px;
+    height: 18rem;
+    border: black;
+    box-shadow: 0 2px 0.25rem rgba(0, 0, 0, .15);
+    background-color: white;
+    padding: 2.5rem 3.125rem;
+    /* margin-left: 1.25rem; */
+
+}
+.card h2{
+    font-size: 1.5rem;
+}
+.cards_icon{
+    font-size: 2rem;
+    color: rgb(57, 23, 247);
+
+}
+/* .card :hover{
+    transform: scale(1.1);
+} */
+.card p{
+    font-size: 0.82rem;
+}
+
+/* ======== Portfolio =============== */
+
+.portfollio{
+    padding: 3.125rem 12.5rem 0px 12.5rem;
+    background-color: #f1f3ff66;
+}
+
+/* ---- Swiper ------- */
+.swiper {
+    padding: 6.25rem 0;
+    width: 100%;
+    height: auto;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.swiper-slide img{
+    width: 600px;
+    height: auto;
+}
+.bts{
+    padding: 1.25rem 3.125rem;
+    text-transform: uppercase;
+    color: white ;
+    background-color: dodgerblue;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1rem;
+}
+.explore{
+    text-align: center;
+}
+
+
+/* ======== customer =============== */
+
+.customer{
+    height: fit-content;
+    background-color: #f1f3ff66;
+}
+.cost-logo img {
+    height: 13rem;
+    object-fit: cover;
+}
+.cost-logo{
+    grid-template-columns: repeat(4,1fr);
+    display: grid;
+    padding: 3.125rem 12.5rem 0 12.5rem;
+}
+
+
+
+/* ======== design =============== */
+
+.design{
+    padding: 3rem 0;
+    background-color: #ccd3fd66;
+    height: fit-content;
+}
+.design img{
+    width: 6.25rem;
+    height: 6.25rem;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    border: grey;
+    object-fit: cover;
+}
+
+.com h2 {
+    font-size: 1rem;
+    color: dodgerblue;
+}
+.com h4{
+    font-size: .8rem;
+}
+
+/* ======== member =============== */
+.member {
+    padding-top: 3.125rem;
+    background-color: #f1f3ff66;
+    height: 50rem;
+}
+.team{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 2rem;
+    row-gap: 2rem;
+    margin-top: 3.125rem;
+    position: relative;
+    border-radius: 50%;
+    padding: 3.125rem 12.5rem;
+}
+.team h2{
+    text-align: center;
+    font-size: 1rem;
+}
+.team p{
+    text-align: center;
+}
+.project{
+    width: 50rem;
+    height: auto;
+    box-shadow: 0.313rem 0.25rem rgba(0, 0, 0, .15);
+    background-color: rgb(255, 255, 255);
+    margin: 0px auto;
+    padding: 1.875rem 1.875rem;
+    justify-content: space-between;  
+    display: flex; 
+}
+.project button{
+    background-color: rgb(2, 89, 202);
+    border: none;
+    border-radius: 0.313rem;
+    padding: 0px 1.25rem;
+    margin: 1.875rem ;
+    font-size: 1rem;
+    color: white;
+}
+.enter{
+    max-width: 950px;
+}
+.enter h1{
+    color: rgb(2, 89, 202);
+    font-size: 1.5rem;
+}
+.enter p{
+    font-size: 0.8rem;
+    padding: 0.625rem 0;
+}
+
+.leader img{
+    height: auto;
+    width: auto;
+    object-fit: cover;
+}
+
+
+
+/* =========== Scroll Bar ============ */
+
+::-webkit-scrollbar{
+    width: .4rem;
+    background-color: black;
+    border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: rgb(116, 115, 115);
+    border-radius: .5rem;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background-color: rgb(175, 175, 175);
+}
+
+
+
+/* ========== Footer ============= */
+footer{
+    background-color: rgb(14, 14, 59);
+    color: white;
+}
+.info {
+    display: flex;
+    justify-content: space-around;
+    padding: 3rem 12rem;
+}
+.digital{
+    max-width: 15rem;
+}
+.info h2{
+    font-size: 1.125rem;
+}
+
+.info p {
+    padding: 0.625rem 0;
+    font-size: 0.825rem;
+}
+.digital i{
+    font-size: 1.5rem;
+}
+.space{
+    padding: 0.625rem;
+}
+.tw,.insta{
+    padding:0px 0.625rem ;
+}
+.info ul{
+    flex-direction: column;
+    margin-top: 0.625rem;
+}
+.info a{
+    color: white;
+    font-weight: 400;
+    font-size: .825rem; 
+}
+.info li{
+    padding: 0 0;
+}
+
+
+/* ================ MEDIA QUERIES =============== */
+@media screen  and (max-width:1920px){
+    :root{
+        font-size: 20px;
+    }
+ .swiper-slide img {
+     width: 500px;
+    }
+ .card {
+     width: 20rem;
+     height: 20rem;
+    }
+ .member {
+    height: 53rem;
+    }
+    .help {
+        height: 65rem;
+    }
+
+}
+@media screen  and (max-width:1536px){
+
+    :root{
+        font-size: 16px;
+    }
+    .logo {
+        font-size: 1rem;
+    }
+    button {
+        font-size: 0.8rem;
+    }
+    .list_item a {
+        font-size: 0.8rem;
+    }
+    .list_item {
+        padding: 1.25rem 1.2rem;
+    }
+    .subtitle{
+        font-size: 1.2rem;
+    }
+    .title{
+        font-size: 1.5rem;
+    }
+    .para{
+        font-size: 0.8rem;
+    }
+    .int_button{
+        font-size: 0.8rem;
+    }
+    .container {
+        margin: 15rem 0 0 12.5rem;
+        max-width: 30rem;
+    }
+    .section-heading {
+        font-size: 1rem;
+    }
+    .section_subtitle {
+        padding: 2rem 5rem;
+        font-size: 1rem;
+    }
+    .card {
+        width: 18rem;
+        height: 16rem;
+        padding: 2rem 2rem;
+        height: 18rem;
+    }
+    .cards_icon {
+        font-size: 1.5rem;
+    }
+    .card h2 {
+        font-size: 1.25rem;
+    }
+    .card p {
+        font-size: 0.78rem;
+    }
+    .help {
+        height: 60rem;
+    }
+    .cost-logo img {
+        height: 12rem;
+    }
+    .bts {
+        padding: 1rem 3rem;
+    }
+    .member {
+        height: 53rem;
+    }
+
+}
+@media screen  and (max-width:1024px){
+
+    :root{
+        font-size: 14px;
+    }
+    .help {
+        padding: 3.125rem 8rem;
+        height: 55rem;
+    }
+    .cost-logo img {
+        height: 8rem;
+    }
+    .member {
+        height: 45rem;
+    }
+    .enter h1 {
+        font-size: 1.2rem;
+    }
+    .enter p {
+        font-size: 0.7rem;
+    }
+    .project button {
+        font-size: 0.8rem;
+    }
+    .project{
+        padding: 1.5rem;
+        margin: 0px 12.75rem;
+    }
+}
+@media screen  and (max-width:768px){
+    .burger{
+        display: block;
+    }
+    body{
+        overflow-x: hidden;
+    }
+    .icon{
+        font-size: 2rem;
+        color: white;
+    }
+    .list{
+        position: absolute;
+        top: 5rem;
+        transform: translateX(200%);
+        border-bottom: 1px solid white;
+        box-shadow: 3px 3px 3px rgba(0, 0, 0, .15);
+        transition: transform .5s ease-in;
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+    }
+    .header{
+        border: 1px solid white;
+        box-shadow: 3px 3px 3px rgba(0, 0, 0, .15);
+        padding: 0.625rem 6.5rem;
+    }
+    .container{
+        margin: 20rem 0 0 6.5rem;
+    }
+    .cards{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .help{
+        height: 75rem;
+    }
+    .swiper {
+        padding: 4rem 0;
+    }
+    .swiper-slide img {
+        width: 300px;
+    }
+    .swiper-button-next:after, .swiper-button-prev:after {
+        font-size: 2rem;
+    }
+    .cost-logo img{
+        height: 5rem;
+    }
+    .team{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .member{
+        height: 60rem;
+    }
+    .project{
+        margin: 0rem auto;
+        width: 40rem;
+    }
+    .info{
+        padding: 3rem 3rem;
+    }
+}
+@media screen  and (max-width:426px){
+    .header {
+        padding: 1rem 2rem;
+    }
+    .container {
+        margin: 15rem 0 0 2rem;
+    }
+    .portfollio .section_subtitle {
+        padding: 2rem 0rem;
+    }
+    .help {
+        padding: 3.125rem 2rem;
+        height: 60rem;
+    }
+    .card{
+        height: 10rem;
+        width: 10rem;
+        padding: 2.5rem 0.5em;
+        text-align: center;
+    }
+    .cards_icon {
+        font-size: 2rem;
+    }
+    .card p{
+        display: none;
+    }
+    .portfollio {
+        padding: 3.125rem 6rem 0px 6rem;
+    }
+    .customer .section_subtitle {
+        padding: 2rem 3rem;
+        font-size: 1rem;
+    }
+    .cost-logo {
+        padding: 3.125rem 3rem 0 3rem;
+    }
+    .design {
+        padding: 3rem 0.8rem;
+    }
+    .design .section_subtitle {
+        padding: 2rem 1rem;
+    }
+    .member .section_subtitle {
+        padding: 2rem 2rem;
+        font-size: 1rem;
+    }
+    .team {
+        padding: 3.125rem 3rem;
+    }
+    .project {
+        display: block;
+        width: 20rem;
+    }
+    .project button {
+        font-size: 1.1rem;
+        margin-left: 4rem;
+        padding: 0.2rem 1.25rem;
+    }
+    .member {
+        height: 70rem;
+    }
+    .business,.get{
+        display: none;
+    }
+}
+@media screen  and (max-width:376px){
+    .section_subtitle {
+        padding: 2rem 0rem;
+    }
+    .bts {
+        padding: 1rem 2rem;
+        font-size: 0.7rem;
+    }
+    section {
+        height: 45rem;
+    }
+    .member {
+        height: 65rem;
+    }
+    .cost-logo img {
+        height: 3.5rem;
+    }
+    .list_button{
+        display: none;
+    }
+    .portfollio {
+        padding: 3.125rem 3rem 0px 3rem;
+    }
+}
+@media screen  and (max-width:321px){
+    .container {
+        margin: 15rem 0 0 3rem;
+        max-width: 18rem;
+    }
+    .card {
+        height: 8rem;
+        width: 8rem;
+        /* padding: 2rem 0; */
+        vertical-align: middle;
+    }
+    .card h2{
+        display: none;
+    }
+    .cards_icon {
+        font-size: 2.5rem;
+    }
+    .help {
+        height: 50rem;
+    }
+}
+.nav-active{
+    transform: translateX(0%);
+}

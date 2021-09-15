@@ -563,7 +563,7 @@ footer{
     .burger{
         display: block;
     }
-    body{
+    body,html{
         overflow-x: hidden;
     }
     .icon{
